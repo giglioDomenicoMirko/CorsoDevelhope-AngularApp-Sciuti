@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectComponent implements OnInit {
 
-  constructor() { }
+  label = 'Io sono una label';
+
+  constructor() {
+    setTimeout(
+      () => this.label = 'Io sono una label aggiornata'
+      ,3000);
+  }
 
   ngOnInit(): void {
   }
