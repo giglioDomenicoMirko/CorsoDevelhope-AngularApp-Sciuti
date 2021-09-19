@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Project } from 'src/app/models/Project';
+import { Project } from '@app/models/Project';
 
 @Component({
   selector: 'ngprj-project',
@@ -44,7 +44,6 @@ export class ProjectComponent implements OnInit {
   ]
 
   constructor() {
-
   }
 
   ngOnInit(): void {

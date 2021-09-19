@@ -1,1 +1,22 @@
-<p>project works!</p>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col" *ngFor="let project of projects">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">
+          <span class="badge bg-secondary rounded-pill">{{
+            project.code
+          }}</span>
+          {{ project.name }}
+        </h5>
+        <p class="card-text">{{ project.description }}</p>
+        <a href="#" class="btn btn-primary btn-sm">Vai al Progetto</a>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">
+          <span>{{ project.start }}</span>
+          <span *ngIf="project.end"> | {{ project.end }}</span>
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
