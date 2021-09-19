@@ -44,18 +44,10 @@ export class ProjectComponent implements OnInit {
   ]
 
   constructor() {
-    setTimeout(() => this.projects[2].done = true, 3000);
   }
 
   ngOnInit(): void {
   }
 
-  getClasses(projectId: Project) {
-    if(projectId.done) {
-      return 'border-info';
-    } else {
-      return 'border-warning';
-    }
-  }
 
 }
