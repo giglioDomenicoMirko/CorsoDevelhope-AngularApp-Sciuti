@@ -12,5 +12,5 @@ export interface Project {
     done: boolean;
     // priority: 'low' | 'medium' | 'high';
     priority: priority;
-    task: Task[];
+    tasks: Task[];
 }
