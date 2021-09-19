@@ -44,11 +44,7 @@ export class ProjectComponent implements OnInit {
   ]
 
   constructor() {
-    // setTimeout(() => this.projects = [], 3000);
-    // setTimeout(() => this.projects[0].name = 'Progetto XYZ', 3000);
-    // setTimeout(() => delete this.projects[0].end, 3000);
-    setTimeout(() => this.projects.pop(), 3000);
-
+    setTimeout(() => this.projects = [], 3000);
   }
 
   ngOnInit(): void {
