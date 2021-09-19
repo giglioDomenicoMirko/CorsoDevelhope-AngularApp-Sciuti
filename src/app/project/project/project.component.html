@@ -12,11 +12,14 @@
         <a href="#" class="btn btn-primary btn-sm">Vai al Progetto</a>
       </div>
       <div class="card-footer">
-        <!-- <small class="text-muted" [ngStyle]="{'font-style': project.done ? 'italic': 'normal'}" [style.fontSize]="'30px'"> -->
-        <small class="text-muted" [ngStyle]="{'font-style': project.done ? 'italic': 'normal'}" [style.fontSize.px]="'50'">
-
-          <span>{{ project.start }}</span>
-          <span *ngIf="project.end"> | {{ project.end }}</span>
+        <small class="text-muted" [ngStyle]="{'font-style': project.done ? 'italic': 'normal'}">
+          <!-- <span>{{ project.start }}</span> <br>
+          <span>{{ project.start | date}}</span> <br>
+          <span>{{ project.start }}</span> <br>
+          <span>{{ project.start | date | uppercase}}</span> <br>
+          <span>{{ project.start | date: 'dd/MMMM/yyyy' }}</span> -->
+          <span>{{ project.start | date: "dd/MM/yyyy" | titlecase }}</span>
+          <span *ngIf="project.end"> | {{ project.end | date: "dd/MM/yyyy" | titlecase }}</span>
         </small>
       </div>
     </div>
