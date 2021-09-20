@@ -44,6 +44,7 @@ export class ProjectComponent implements OnInit {
   ]
 
   constructor() {
+    setTimeout(()=> this.projects[0].done = false, 3000);
   }
 
   ngOnInit(): void {

@@ -9,15 +9,10 @@
           {{ project.name }}
         </h5>
         <p class="card-text">{{ project.description }}</p>
-        <a href="#" class="btn btn-primary btn-sm">Vai al Progetto</a>
+        <button [disabled]="project.done" class="btn btn-primary btn-sm">Vai al Progetto</button>
       </div>
       <div class="card-footer">
         <small class="text-muted" [ngStyle]="{'font-style': project.done ? 'italic': 'normal'}">
-          <!-- <span>{{ project.start }}</span> <br>
-          <span>{{ project.start | date}}</span> <br>
-          <span>{{ project.start }}</span> <br>
-          <span>{{ project.start | date | uppercase}}</span> <br>
-          <span>{{ project.start | date: 'dd/MMMM/yyyy' }}</span> -->
           <span>{{ project.start | date: "dd/MM/yyyy" | titlecase }}</span>
           <span *ngIf="project.end"> | {{ project.end | date: "dd/MM/yyyy" | titlecase }}</span>
         </small>

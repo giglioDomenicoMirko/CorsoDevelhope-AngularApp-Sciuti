@@ -10,7 +10,6 @@ export interface Project {
     start: Date;
     end?: Date;
     done: boolean;
-    // priority: 'low' | 'medium' | 'high';
     priority: priority;
     tasks: Task[];
 }
