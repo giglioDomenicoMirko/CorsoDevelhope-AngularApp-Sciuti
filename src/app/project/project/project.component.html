@@ -24,7 +24,7 @@
 
 <hr>
 <!-- <p *ngIf="selectedProject">Progetto selezionato: {{ selectedProject.name }}</p> -->
-<ngprj-project-detail></ngprj-project-detail>
+<ngprj-project-detail [project]="selectedProject"></ngprj-project-detail>
 
 <ng-template #noProjects>
     <p>Non è presente nessun progetto</p>

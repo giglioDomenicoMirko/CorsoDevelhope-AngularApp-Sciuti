@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Project } from '@app/models/Project';
 
 @Component({
@@ -8,10 +8,9 @@ import { Project } from '@app/models/Project';
 })
 export class ProjectDetailComponent implements OnInit {
 
-  project!: Partial<Project>;
+  @Input() project!: Project;
 
   constructor() {
-    this.project = {id: 1, name: 'prova'};
   }
 
   ngOnInit(): void {
