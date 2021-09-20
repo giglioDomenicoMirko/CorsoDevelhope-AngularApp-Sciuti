@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Project } from '@app/models/Project';
 
 @Component({
   selector: 'ngprj-project-detail',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectDetailComponent implements OnInit {
 
-  constructor() { }
+  project!: Partial<Project>;
+
+  constructor() {
+    this.project = {id: 1, name: 'prova'};
+  }
 
   ngOnInit(): void {
   }

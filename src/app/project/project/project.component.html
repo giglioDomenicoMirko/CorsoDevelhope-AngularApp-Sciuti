@@ -22,13 +22,13 @@
   </div>
 </div>
 
-<p *ngIf="selectedProject">Progetto selezionato: {{ selectedProject.name }}</p>
+<hr>
+<!-- <p *ngIf="selectedProject">Progetto selezionato: {{ selectedProject.name }}</p> -->
+<ngprj-project-detail></ngprj-project-detail>
 
 <ng-template #noProjects>
     <p>Non è presente nessun progetto</p>
 </ng-template>
-
-<hr>
 
 <form #f="ngForm" class="row g-3">
     <div class="col-md-4">
