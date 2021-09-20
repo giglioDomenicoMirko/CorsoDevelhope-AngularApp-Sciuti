@@ -7,9 +7,11 @@
             project.code
           }}</span>
           {{ project.name }}
-        </h5>
+        </h5> 
         <p class="card-text">{{ project.description }}</p>
-        <button [disabled]="project.done" class="btn btn-primary btn-sm">Vai al Progetto</button>
+        <!-- <button [disabled]="project.done" class="btn btn-primary btn-sm">Vai al Progetto</button> -->
+        <button (click)="selectProject(project)" class="btn btn-primary btn-sm">Vai al Progetto</button>
+
       </div>
       <div class="card-footer">
         <small class="text-muted" [ngStyle]="{'font-style': project.done ? 'italic': 'normal'}">
@@ -20,6 +22,8 @@
     </div>
   </div>
 </div>
+
+<p *ngIf="selectedProject">Progetto selezionato: {{ selectedProject.name }}</p>
 
 <ng-template #noProjects>
     <p>Non è presente nessun progetto</p>

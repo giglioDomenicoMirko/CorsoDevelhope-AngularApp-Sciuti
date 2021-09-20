@@ -8,6 +8,8 @@ import { Project } from '@app/models/Project';
 })
 export class ProjectComponent implements OnInit {
 
+  selectedProject!: Project;
+
   projects: Project[] = [
     {
       id: 1,
@@ -44,10 +46,14 @@ export class ProjectComponent implements OnInit {
   ]
 
   constructor() {
-    setTimeout(()=> this.projects[0].done = false, 3000);
   }
 
   ngOnInit(): void {
+  }
+
+  selectProject(project: Project) {
+    // console.log(project);
+    this.selectedProject = project;
   }
 
 
