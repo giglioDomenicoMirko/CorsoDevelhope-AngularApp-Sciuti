@@ -58,6 +58,6 @@
 
     </div>
     <div class="col-12">
-      <button [disabled]="f.invalid" type="submit" class="w-100 btn btn-primary btn-lg">Crea</button>
+      <button [disabled]="f.invalid" type="submit" class="w-100 btn btn-primary btn-lg" (click)="submitProjectForm(f)">Crea</button>
     </div>
   </form>
