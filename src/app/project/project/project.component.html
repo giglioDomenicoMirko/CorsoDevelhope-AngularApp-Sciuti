@@ -9,7 +9,6 @@
           {{ project.name }}
         </h5> 
         <p class="card-text">{{ project.description }}</p>
-        <!-- <button [disabled]="project.done" class="btn btn-primary btn-sm">Vai al Progetto</button> -->
         <button (click)="selectProject(project)" class="btn btn-primary btn-sm">Vai al Progetto</button>
 
       </div>
@@ -31,13 +30,11 @@
 
 <hr>
 
-<form #f="ngForm" (ngSubmit)="submitProjectForm(f)" class="row g-3">
+<form #f="ngForm" class="row g-3">
     <div class="col-md-4">
       <label for="name" class="form-label">Nome</label>
       <input type="text" name="name" class="form-control" placeholder="Nome" required ngModel #nameField="ngModel">
-      <!-- <p *ngIf="f.controls?.name?.invalid && f.controls?.name?.touched" class="text-danger"><small>Il campo è richiesto</small></p> -->
       <p *ngIf="nameField.invalid && nameField.touched" class="text-danger"><small>Il campo è richiesto</small></p>
-      {{ f.controls?.name?.valid }}
     </div>
     <div class="col-md-4">
       <label for="priority" class="form-label">Priority</label>
@@ -64,5 +61,3 @@
       <button [disabled]="f.invalid" type="submit" class="w-100 btn btn-primary btn-lg">Crea</button>
     </div>
   </form>
-
-  <p>Validità: {{ f.valid }}</p>

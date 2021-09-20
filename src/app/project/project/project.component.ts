@@ -56,9 +56,7 @@ export class ProjectComponent implements OnInit {
     this.selectedProject = project;
   }
   
-  submitProjectForm(f: NgForm) {
-    console.log('Form submitted', f);
-  }
+
 
 
 }
