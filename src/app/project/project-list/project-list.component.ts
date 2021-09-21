@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Project } from '@app/models/Project';
 
 @Component({
   selector: 'ngprj-project-list',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectListComponent implements OnInit {
 
+  @Input() projects: Project[] = [];
+  @Output() selected = new EventEmitter
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  select(project: Project) {
+    this.selected.emit(project);
   }
 
 }
