@@ -1,1 +1,31 @@
-<p>project-form works!</p>
+<form #f="ngForm" class="row g-3">
+    <div class="col-md-4">
+      <label for="name" class="form-label">Nome</label>
+      <input type="text" name="name" class="form-control" placeholder="Nome" required ngModel #nameField="ngModel">
+      <p *ngIf="nameField.invalid && nameField.touched" class="text-danger"><small>Il campo è richiesto</small></p>
+    </div>
+    <div class="col-md-4">
+      <label for="priority" class="form-label">Priority</label>
+      <select class="form-select" name="priority" required ngModel #priorityField="ngModel">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <p *ngIf="priorityField.invalid && priorityField.touched" class="text-danger"><small>Il campo è richiesto</small></p>
+    </div>
+    <div class="col-md-4">
+      <label for="validationDefaultUsername" class="form-label">Date</label>
+      <input type="date" name="start" class="form-control" placeholder="Data di inizio" required ngModel #dataField="ngModel">
+      <p *ngIf="dataField.invalid && dataField.touched" class="text-danger"><small>Il campo è richiesto</small></p>
+
+    </div>
+    <div class="col-md-12">
+      <label for="description" class="form-label">Description</label>
+      <textarea class="form-control" name="description" placeholder="Description " required ngModel #descriptionField="ngModel"></textarea>
+      <p *ngIf="descriptionField.invalid && descriptionField.touched" class="text-danger"><small>Il campo è richiesto</small></p>
+
+    </div>
+    <div class="col-12">
+      <button [disabled]="f.invalid" type="submit" class="w-100 btn btn-primary btn-lg" (click)="submit(f)">Crea</button>
+    </div>
+  </form>

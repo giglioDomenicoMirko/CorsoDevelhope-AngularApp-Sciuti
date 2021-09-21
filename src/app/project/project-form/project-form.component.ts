@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'ngprj-project-form',
@@ -10,6 +11,10 @@ export class ProjectFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  submit(f: NgForm) {
+    console.log(f.value);
   }
 
 }
