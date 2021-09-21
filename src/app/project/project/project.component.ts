@@ -56,12 +56,12 @@ export class ProjectComponent implements OnInit {
     this.selectedProject = project;
   }
   
-  submitProjectForm(f: NgForm) {
+  submitProjectForm(project: Project) {
     this.projects.push({
+      ...project,
       id: this.projects.length,
       code: Math.random().toString(36).replace('0.', '').substring(2, 9),
       done: false,
-      ...f.value
     });
   }
 
