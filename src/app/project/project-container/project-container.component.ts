@@ -3,9 +3,9 @@ import { NgForm } from '@angular/forms';
 import { Project } from '@app/models/Project';
 
 @Component({
-  selector: 'ngprj-project',
-  templateUrl: './project.component.html',
-  styleUrls: ['./project.component.css']
+  selector: 'ngprj-project-container',
+  templateUrl: './project-container.component.html',
+  styleUrls: ['./project-container.component.css']
 })
 export class ProjectComponent implements OnInit {
 
