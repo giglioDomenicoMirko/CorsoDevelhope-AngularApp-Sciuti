@@ -10,6 +10,7 @@ import { ProjectFormComponent } from './project/project-form/project-form.compon
 import { HomeComponent } from './dashboard/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './layout/navbar/navbar.component';
+import { SectionHeaderComponent } from './shared/section-header/section-header.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
     ProjectListComponent,
     ProjectFormComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    SectionHeaderComponent
   ],
   imports: [
     BrowserModule,

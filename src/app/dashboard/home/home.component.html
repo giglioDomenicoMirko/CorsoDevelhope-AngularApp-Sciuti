@@ -1,4 +1,4 @@
-<div class="row mt-5">
+<!-- <div class="row mt-5">
     <div class="col-8">
         <h2>Benvenuti su {{ title | uppercase }}</h2>
     </div>
@@ -6,6 +6,10 @@
         <button class="btn btn-link" routerLink="/projects">Vai a Progetti</button>
     </div>
 </div>
-<hr>
+<hr> -->
+<ngprj-section-header
+    [title]="'Benvenuti su NGPrj'"
+    [button]="{ label: 'Vai ai progetti', link: '/projects'}"
+></ngprj-section-header>
 
 <p>Questa è la tua prima applicazione Angular</p>
