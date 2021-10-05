@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LogService } from '@app/shared/log.service';
 
 @Component({
   selector: 'ngprj-home',
@@ -8,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   title = "NGPrj";
 
-  constructor() { }
+  constructor(private logService: LogService) {
+    this.logService.log('Adesso sei nella Home');
+   }
 
   ngOnInit(): void {
   }

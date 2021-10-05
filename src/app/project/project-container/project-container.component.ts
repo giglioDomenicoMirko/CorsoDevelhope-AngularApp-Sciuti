@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Project } from '@app/models/Project';
+import { LogService } from '@app/shared/log.service';
 
 @Component({
   selector: 'ngprj-project-container',
@@ -46,7 +47,8 @@ export class ProjectComponent implements OnInit {
     }
   ]
 
-  constructor() {
+  constructor(private logService: LogService) {
+    this.logService.log('Costruttore del Prj Cmp');
   }
 
   ngOnInit(): void {
