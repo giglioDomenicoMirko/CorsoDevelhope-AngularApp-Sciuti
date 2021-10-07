@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Project } from '@app/models/Project';
 import { LogService } from '@app/shared/log.service';
+import { ProjectService } from '../project.service';
 
 @Component({
   selector: 'ngprj-project-container',
@@ -14,24 +15,25 @@ export class ProjectComponent implements OnInit {
 
   projects: Project[] = [];
 
-  constructor(private logService: LogService) {
-    this.logService.log('Costruttore del Prj Cmp');
+  constructor(private projectService: ProjectService) {
   }
 
   ngOnInit(): void {
+    this.projects = this.projectService.getAll();
   }
 
   selectProject(project: Project) {
-    this.selectedProject = project;
+    this.selectedProject = this.projectService.get(project.id);
   }
   
   submitProjectForm(project: Project) {
-    this.projects.push({
-      ...project,
-      id: this.projects.length,
-      code: Math.random().toString(36).replace('0.', '').substring(2, 9),
-      done: false,
-    });
+    this.projectService.add(project);
+    // this.projects.push({
+    //   ...project,
+    //   id: this.projects.length,
+    //   code: Math.random().toString(36).replace('0.', '').substring(2, 9),
+    //   done: false,
+    // });
   }
 
 

@@ -48,7 +48,13 @@ export class ProjectService {
   }
 
   add(project: Project): void {
-    this.projects.push(project);
+    // this.projects.push(project);
+    this.projects.push({
+      ...project,
+      id: this.projects.length,
+      code: Math.random().toString(36).replace('0.', '').substring(2, 9),
+      done: false,
+    });
   }
 
   get(id: number): Project {
