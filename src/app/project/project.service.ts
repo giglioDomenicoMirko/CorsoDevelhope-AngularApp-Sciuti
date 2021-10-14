@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Project } from '@app/models/Project';
+import { LogService } from '@app/shared/log.service';
 
 @Injectable({
   providedIn: 'root'
@@ -41,14 +42,15 @@ export class ProjectService {
     }
   ]
 
-  constructor() { }
+  constructor(private logService: LogService) {}
 
   getAll(): Project[] {
-    return this.projects;
+    this.logService.log('getAll Eseguito');
+    return [...this.projects];
   }
 
   add(project: Project): void {
-    // this.projects.push(project);
+    this.logService.log('add Eseguito');
     this.projects.push({
       ...project,
       id: this.projects.length,
@@ -58,6 +60,7 @@ export class ProjectService {
   }
 
   get(id: number): Project {
+    this.logService.log('get Eseguito');
     return this.projects.find(project => project.id === id) as Project;
   }
 
