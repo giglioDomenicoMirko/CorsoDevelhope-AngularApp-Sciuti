@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Project } from '@app/models/Project';
 import { LogService } from '@app/shared/log.service';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { ProjectService } from '../project.service';
 
 @Component({
@@ -16,15 +16,17 @@ export class ProjectComponent implements OnInit, OnDestroy {
 
   selectedProject!: Project;
 
-  projects: Project[] = [];
+  // projects: Project[] = [];
+  projects$!: Observable<Project[]>;
 
   constructor(private projectService: ProjectService) {
   }
 
   ngOnInit(): void {
-    this.subscription = this.projectService.getAll().subscribe(data => {
-      this.projects = data;
-    });
+    this.projects$ = this.projectService.getAll();
+    // this.subscription = this.projectService.getAll().subscribe(data => {
+    //   this.projects = data;
+    // });
   }
  
   selectProject(project: Project) {
@@ -42,7 +44,7 @@ export class ProjectComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    // this.subscription.unsubscribe();
   }
 
 

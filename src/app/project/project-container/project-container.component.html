@@ -8,7 +8,10 @@
     [button]="{ label: 'Vai alla Home', link: '/home'}"
 ></ngprj-section-header> 
 
-<ngprj-project-list [projects]="projects" (selected)="selectProject($event)"></ngprj-project-list>
+<ng-container *ngIf="projects$ | async as projects">
+    <!-- {{ projects | json }} -->
+    <ngprj-project-list [projects]="projects" (selected)="selectProject($event)"></ngprj-project-list>
+</ng-container>
 
 <hr>
 <ngprj-project-detail [project]="selectedProject"></ngprj-project-detail>
