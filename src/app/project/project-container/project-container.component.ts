@@ -19,9 +19,11 @@ export class ProjectComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.projects = this.projectService.getAll();
+    this.projectService.getAll().subscribe(data => {
+      this.projects = data;
+    });
   }
-
+ 
   selectProject(project: Project) {
     this.selectedProject = this.projectService.get(project.id);
   }

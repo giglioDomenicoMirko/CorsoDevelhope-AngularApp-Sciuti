@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Project } from '@app/models/Project';
 import { LogService } from '@app/shared/log.service';
-
+import { BehaviorSubject, Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
@@ -42,11 +43,17 @@ export class ProjectService {
     }
   ]
 
+  private projectSubject = new BehaviorSubject<Project[]>(this.projects);
+  public project$ = this.projectSubject.asObservable();
+
   constructor(private logService: LogService) {}
 
-  getAll(): Project[] {
-    this.logService.log('getAll Eseguito');
-    return [...this.projects];
+  getAll(): Observable<Project[]> {
+    // this.logService.log('getAll Eseguito');
+    return this.project$.pipe(
+      tap(() => this.logService.log('getAll Eseguito'))
+    );
+    // return [...this.projects];
   }
 
   add(project: Project): void {
@@ -57,6 +64,7 @@ export class ProjectService {
       code: Math.random().toString(36).replace('0.', '').substring(2, 9),
       done: false,
     });
+    this.projectSubject.next(this.projects.slice());
   }
 
   get(id: number): Project {
