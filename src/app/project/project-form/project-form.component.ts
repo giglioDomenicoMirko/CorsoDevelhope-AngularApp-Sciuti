@@ -7,6 +7,7 @@ import { Project } from '@app/models/Project';
   templateUrl: './project-form.component.html',
   styleUrls: ['./project-form.component.css']
 })
+
 export class ProjectFormComponent implements OnInit {
 
   @Output() submitted = new EventEmitter<Project>();

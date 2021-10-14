@@ -14,10 +14,6 @@ interface Button {
 export class SectionHeaderComponent implements OnInit {
   @Input() title= '';
 
-  // @Input() buttonLabel = 'Vai a ...';
-  // @Input() buttonClass = 'btn-link';
-  // @Input() buttonLink = '';
-
   _button: Button = {
     label: 'Vai a...',
     link: '',
