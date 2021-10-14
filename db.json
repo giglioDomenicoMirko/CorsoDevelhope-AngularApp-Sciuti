@@ -31,6 +31,26 @@
       "priority": "low",
       "done": false,
       "tasks": []
+    },
+    {
+      "id": 4,
+      "code": "TEST-DB",
+      "name": "Progetto database",
+      "description": "test del database",
+      "start": "2021-10-14",
+      "priority": "low",
+      "done": false,
+      "tasks": []
+    },
+    {
+      "name": "PROGETTO TEST INSERITO DALLA MASCHERA",
+      "priority": "high",
+      "start": "2021-10-14",
+      "description": "PROGETTO INSERITO DIRETTAMENTE DALLA VIEW",
+      "code": "m68wj89",
+      "done": false,
+      "tasks": [],
+      "id": 5
     }
   ],
   "tasks": []

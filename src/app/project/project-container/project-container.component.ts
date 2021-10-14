@@ -30,11 +30,15 @@ export class ProjectComponent implements OnInit, OnDestroy {
   }
  
   selectProject(project: Project) {
-    this.selectedProject = this.projectService.get(project.id);
+    // this.selectedProject = this.projectService.get(project.id);
+    // this.selectedProject = this.projectService.get(project.id);
+    this.subscription = this.projectService.get(project.id).subscribe(data => {
+      this.selectedProject = data;
+    })
   }
   
   submitProjectForm(project: Project) {
-    this.projectService.add(project);
+    this.projectService.add(project).subscribe(data => this.projects$ = this.projectService.getAll());
     // this.projects.push({
     //   ...project,
     //   id: this.projects.length,
@@ -44,7 +48,7 @@ export class ProjectComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    // this.subscription.unsubscribe();
+    this.subscription.unsubscribe();
   }
 
 
