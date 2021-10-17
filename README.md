@@ -1,4 +1,19 @@
-# Ngprj
+_**Progetto creato seguendo le lezioni del corso Angular di [Develhope](https://develhope.co)- Prof. Sciuti**_
+
+In questo progetto abbiamo realizzato una single page application in Angular per la gestione dei progetti, quindi inserimento di un nuovo progetto, modifica e visualizzazione di essi.
+
+Principali argomenti trattati:
+* Componenti e moduli
+* Forms
+* Direttive @Input e @Output
+* Routing
+* Services
+* RxJS
+* Chiamate API
+
+**N.B.** Il progetto segue passo passo il corso. Per facilitare la consultazione e la variazione del codice nel tempo il naming dei commit segue il titolo delle lezioni.
+
+<!-- # Ngprj
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.3.
 
@@ -24,4 +39,4 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page. -->
