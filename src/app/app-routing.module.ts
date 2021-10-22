@@ -5,9 +5,11 @@ import { ProjectComponent } from './project/project-container/project-container.
 import { ProjectDetailComponent } from './project/project-detail/project-detail.component';
 
 const routes: Routes = [
-    { path:'projects/detail/:id', component: ProjectDetailComponent},
-    { path:'projects', component: ProjectComponent},
-    { path: 'home', component: HomeComponent}
+    { path:'projects/detail/:id', component: ProjectDetailComponent },
+    { path:'projects', component: ProjectComponent },
+    { path: 'home', component: HomeComponent },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: '**', redirectTo: '/home' }
 ];
 
 @NgModule({
