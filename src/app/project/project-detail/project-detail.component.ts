@@ -1,7 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
-import { Project } from '@app/models/Project';
+
+import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+
+import { Project } from '@app/models/Project';
 import { ProjectService } from '../project.service';
 
 @Component({
@@ -11,7 +14,8 @@ import { ProjectService } from '../project.service';
 })
 export class ProjectDetailComponent implements OnInit {
 
-  @Input() project!: Project;
+  // @Input() project!: Project;
+  project$!: Observable<Project>;
 
   constructor(
     private activateRoute: ActivatedRoute,
@@ -19,9 +23,9 @@ export class ProjectDetailComponent implements OnInit {
     ) {  }
 
   ngOnInit(): void {
-    this.activateRoute.paramMap.pipe(
+    this.project$ = this.activateRoute.paramMap.pipe(
       switchMap((params: ParamMap) => this.projectService.get(+params.get('id')!))
-    ).subscribe(data => console.log(data))
+    )/* .subscribe(data => console.log(data)) */
   }
 
 }
