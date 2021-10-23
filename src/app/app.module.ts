@@ -10,8 +10,8 @@ import { ProjectFormComponent } from './modules/project/component/project-form/p
 import { HomeComponent } from './modules/dashboard/pages/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './layout/navbar/navbar.component';
-import { SectionHeaderComponent } from './shared/section-header/section-header.component';
 import { HttpClientModule } from '@angular/common/http'
+import { Sharedmodule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -21,13 +21,13 @@ import { HttpClientModule } from '@angular/common/http'
     ProjectListComponent,
     ProjectFormComponent,
     HomeComponent,
-    NavbarComponent,
-    SectionHeaderComponent
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    Sharedmodule,
     HttpClientModule
   ],
   providers: [],
