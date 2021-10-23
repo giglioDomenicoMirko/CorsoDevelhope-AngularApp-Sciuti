@@ -6,6 +6,7 @@ import { ProjectFormComponent } from "./component/project-form/project-form.comp
 import { ProjectListComponent } from "./component/project-list/project-list.component";
 import { ProjectDashboardComponent } from "./pages/project-dashboard/project-dashboard.component";
 import { ProjectDetailComponent } from "./pages/project-detail/project-detail.component";
+import { ProjectRoutingModule } from "./project-routing.module";
 
 @NgModule ({
     declarations: [
@@ -17,7 +18,8 @@ import { ProjectDetailComponent } from "./pages/project-detail/project-detail.co
     imports: [
         Sharedmodule,
         CommonModule,
-        FormsModule
+        FormsModule,
+        ProjectRoutingModule
     ]
 })
 export class ProjectModule {}
