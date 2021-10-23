@@ -51,6 +51,16 @@
       "done": false,
       "tasks": [],
       "id": 5
+    },
+    {
+      "name": "Progetto di test",
+      "priority": "low",
+      "start": "2021-10-23",
+      "description": "Inserito giorno 23/10",
+      "code": "z9g8nhq",
+      "done": false,
+      "tasks": [],
+      "id": 6
     }
   ],
   "tasks": []

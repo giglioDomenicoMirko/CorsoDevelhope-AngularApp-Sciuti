@@ -4,16 +4,13 @@
 ></ngprj-section-header> 
 
 <ng-container *ngIf="project$ | async as project">
-    <!-- <div class="container-fluid py-5" *ngIf="project"> -->
     <div class="container-fluid py-5" *ngIf="project">
         <div class="card">
             <div class="card-body">
+
                 <h1 class="display-5 fw-bold">{{ project.name }}</h1>
                 <p class="col-md-8 fs-4">{{ project.description }}</p>
             </div>
         </div>
     </div>
 </ng-container>
-    
-<!-- <button routerLink="/projects/detail/1">Progetto 1</button>
-<button routerLink="/projects/detail/2">Progetto 2</button> -->
