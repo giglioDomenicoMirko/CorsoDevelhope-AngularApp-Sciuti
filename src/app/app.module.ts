@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ProjectDashboardComponent } from './project/project-dashboard/project-dashboard.component';
+import { ProjectDashboardComponent } from './modules/project/pages/project-dashboard/project-dashboard.component';
 import { ProjectDetailComponent } from './modules/project/pages/project-detail/project-detail.component';
 import { ProjectListComponent } from './modules/project/component/project-list/project-list.component';
 import { ProjectFormComponent } from './modules/project/component/project-form/project-form.component';

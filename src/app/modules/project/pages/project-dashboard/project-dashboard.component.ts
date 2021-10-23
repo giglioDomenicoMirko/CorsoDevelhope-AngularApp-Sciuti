@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Project } from '@app/models/Project';
 import { Observable } from 'rxjs';
-import { ProjectService } from '../project.service';
+import { ProjectService } from '../../../../project/project.service';
 
 @Component({
   selector: 'ngprj-project-dashboard',
