@@ -6,21 +6,19 @@ import { HomeComponent } from './modules/dashboard/pages/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http'
-import { ProjectModule } from './modules/project/project.modules';
-// import { ProjectComponent } from './modules/project/pages/project.component';
+// import { ProjectModule } from './modules/project/project.modules';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    // ProjectComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ProjectModule
+    // ProjectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

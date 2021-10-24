@@ -7,7 +7,8 @@ import { ProjectComponent } from "./pages/project.component";
 
 const routes: Routes = [
     {
-        path: 'projects',
+        // path: 'projects',
+        path: '',
         component: ProjectComponent,
         children: [
             { path:'detail/:id', component: ProjectDetailComponent },
