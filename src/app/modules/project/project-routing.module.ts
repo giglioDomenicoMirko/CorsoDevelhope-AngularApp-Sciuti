@@ -7,7 +7,6 @@ import { ProjectComponent } from "./pages/project.component";
 
 const routes: Routes = [
     {
-        // path: 'projects',
         path: '',
         component: ProjectComponent,
         children: [
