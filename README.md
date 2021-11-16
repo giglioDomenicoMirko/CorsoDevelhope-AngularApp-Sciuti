@@ -1,17 +1,17 @@
-_**Progetto creato seguendo le lezioni del corso Angular di [Develhope](https://develhope.co)- Prof. Sciuti**_
+_**Project created following the lessons of the Angular course of [Develhope](https://develhope.co)- Prof. Sciuti**_
 
-In questo progetto abbiamo realizzato una single page application in Angular per la gestione dei progetti, quindi inserimento di un nuovo progetto, modifica e visualizzazione di essi.
+In this project we have created a single page application in Angular for project management. It is possible to insert a new project, modify and view it.
 
-Principali argomenti trattati:
-* Componenti e moduli
+Main topics covered:
+* Components and modules
 * Forms
-* Direttive @Input e @Output
+* @Input and @Output
 * Routing
 * Services
 * RxJS
-* Chiamate API
+* API
 
-**N.B.** Il progetto segue passo passo il corso. Per facilitare la consultazione e la variazione del codice nel tempo il naming dei commit segue il titolo delle lezioni.
+**N.B.** The project follows the course step by step. To facilitate consultation and as the code varies over time, the naming of the commits follows the title of the lessons. 
 
 <!-- # Ngprj
 
